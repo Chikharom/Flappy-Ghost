@@ -1,0 +1,10 @@
+Il faut d'abbord detecter quand le joueur tape "twado".
+Donc dans notre event onKeyTyped on a un string qui compte chaque caractère tapé
+dont que les 5 derniers sont conservé. A chaque fois que l'utilisateur tape
+de suite 't','w','a','d' puis 'o' le canvas sera transformer avec une rotation de 180
+degré.
+
+Il faut aussi redéfinir l'axe de rotation du canvas à sa création. Par défaut cet axe
+est l'axe z ce qui fait tourner les éléments en x et en y. Pour faire en sorte qu'ils
+ne tournent qu'en z et y il faut redéfinir l'axe de rotation autour de x.
+Ceci est fait avec la méthode canvas.setRotationAxis(new Point3D(1, 0, 0));
